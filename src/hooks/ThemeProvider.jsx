@@ -25,3 +25,8 @@ export const useTheme = () => {
   const theme = useContext(ThemeContext);
   return theme;
 };
+
+export const useToggle = () => {
+  const toggle = useContext(ThemeContext);
+  return toggle;
+};
