@@ -1,9 +1,15 @@
 .Dark{
   background-color: black;
   color: white;
+  html {
+    background-color: black;
+  }
 }
 
 .Light{
   background-color: white;
   color: blue;
+  html {
+    background-color: white;
+  }
 }
