@@ -13,7 +13,7 @@ export const ContentProvider = ({ children }) => {
   }, []);
 
   return (
-    <XfilesContent.Provider value={characters}>
+    <XfilesContent.Provider value={{ characters }}>
       {children}
     </XfilesContent.Provider>
   );

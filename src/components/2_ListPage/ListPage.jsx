@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { ContentProvider } from '../../hooks/ContentProvider';
+import { XfilesContent } from '../../hooks/ContentProvider';
 
 const ListPage = () => {
-  const characters = useContext(ContentProvider);
+  const characters = useContext(XfilesContent);
+
   console.log(characters);
 
   return (
