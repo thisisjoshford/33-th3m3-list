@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { getPeople } from '../services/apiFetch';
 
-const XfilesContent = createContext();
+export const XfilesContent = createContext();
 
 export const ContentProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
@@ -9,11 +10,16 @@ export const ContentProvider = ({ children }) => {
   useEffect(() => {
     getPeople()
       .then(peeps => setCharacters(peeps));
+  }, []);
 
-  });
   return (
     <XfilesContent.Provider value={characters}>
       {children}
     </XfilesContent.Provider>
   );
 };
+
+ContentProvider.propTypes = {
+  children: PropTypes.node
+};
+
