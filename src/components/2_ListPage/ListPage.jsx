@@ -1,16 +1,22 @@
 import React, { useContext } from 'react';
 import { XfilesContent } from '../../hooks/ContentProvider';
+import { useTheme } from '../../hooks/ThemeProvider';
 
 const ListPage = () => {
   const { characters } = useContext(XfilesContent);
-
+  const { theme } = useTheme();
+  
+  let listHeader;
+  if(theme === 'light') {listHeader = (<h3> LIGHT!!!!!! </h3>);}
+  if(theme === 'dark') {listHeader = (<h3> DARK!!!!!!</h3>);}
+  
   const elements = characters.map((character) => (
     <li key={character.name}>{character.name}</li>
   ));
 
   return (
     <>
-      <h3>List of all XFiles Characters</h3>
+      {listHeader}
       <ul>
         { elements }  
       </ul>
