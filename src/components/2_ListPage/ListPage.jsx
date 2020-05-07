@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import { XfilesContent } from '../../hooks/ContentProvider';
 import { useTheme } from '../../hooks/ThemeProvider';
+import ListStyle from './ListPage.css';
 
 const ListPage = () => {
   const { characters } = useContext(XfilesContent);
   const { theme } = useTheme();
   
-  let listHeader;
-  if(theme === 'light') {listHeader = (<h3> LIGHT!!!!!! </h3>);}
-  if(theme === 'dark') {listHeader = (<h3> DARK!!!!!!</h3>);}
+  let styling;
+  if(theme === 'light') styling = ListStyle.Light;
+  if(theme === 'dark') styling = ListStyle.Dark;
   
   const elements = characters.map((character) => (
     <li key={character.name}>{character.name}</li>
@@ -16,8 +17,7 @@ const ListPage = () => {
 
   return (
     <>
-      {listHeader}
-      <ul>
+      <ul className={styling}>
         { elements }  
       </ul>
     </>
