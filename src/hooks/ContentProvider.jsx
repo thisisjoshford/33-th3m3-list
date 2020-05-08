@@ -6,14 +6,20 @@ export const XfilesContent = createContext();
 
 export const ContentProvider = ({ children }) => {
   const [characters, setCharacters] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const paging = (num) => {
+    if(page >= 1)
+      setPage(page + num);
+  };
 
   useEffect(() => {
-    getPeople()
+    getPeople(page)
       .then(peeps => setCharacters(peeps));
-  }, []);
+  }, [page]);
 
   return (
-    <XfilesContent.Provider value={{ characters }}>
+    <XfilesContent.Provider value={{ characters, paging }}>
       {children}
     </XfilesContent.Provider>
   );
@@ -22,4 +28,3 @@ export const ContentProvider = ({ children }) => {
 ContentProvider.propTypes = {
   children: PropTypes.node
 };
-

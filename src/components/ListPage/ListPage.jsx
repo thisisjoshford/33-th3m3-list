@@ -4,7 +4,7 @@ import { useTheme } from '../../hooks/ThemeProvider';
 import ListStyle from './ListPage.css';
 
 const ListPage = () => {
-  const { characters } = useContext(XfilesContent);
+  const { characters, paging } = useContext(XfilesContent);
   const { theme } = useTheme();
   
   let styling;
@@ -17,6 +17,9 @@ const ListPage = () => {
 
   return (
     <>
+      <br></br>
+      <button onClick={() => paging(-1)}>&#8672;</button>
+      <button onClick={() => paging(1)}>&#8674;</button>
       <ul className={styling}>
         { elements }  
       </ul>
