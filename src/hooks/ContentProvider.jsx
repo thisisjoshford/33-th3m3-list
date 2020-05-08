@@ -19,7 +19,7 @@ export const ContentProvider = ({ children }) => {
   }, [page]);
 
   return (
-    <XfilesContent.Provider value={{ characters, paging }}>
+    <XfilesContent.Provider value={{ characters, page, paging }}>
       {children}
     </XfilesContent.Provider>
   );
