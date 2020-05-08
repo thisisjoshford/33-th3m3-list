@@ -18,7 +18,7 @@ const ListPage = () => {
   return (
     <>
       <br></br>
-      
+
       <button 
         onClick={() => paging(-1)} 
         disabled={page === 1}
@@ -27,11 +27,11 @@ const ListPage = () => {
 
       <button 
         onClick={() => paging(1)}
-        disabled={characters.length < 20}
+        disabled={characters.length < 33}
       >&#8674;
       </button>
 
-      <ul className={styling}>
+      <ul className={styling}>  
         { elements }  
       </ul>
 
