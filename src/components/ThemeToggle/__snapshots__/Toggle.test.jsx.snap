@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle component renders Toggle 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "characters": Array [],
+      "page": 1,
+      "paging": [Function],
+    }
+  }
+>
+  <Toggle
+    toggle={[Function]}
+    value={true}
+  />
+</ContextProvider>
+`;
