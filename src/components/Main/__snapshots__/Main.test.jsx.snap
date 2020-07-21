@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component renders Main 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "theme": "light",
+      "toggle": [Function],
+    }
+  }
+>
+  <Main />
+</ContextProvider>
+`;

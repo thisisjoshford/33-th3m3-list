@@ -1,6 +1,6 @@
 # Themeable X-Files
 
-[] - Display a list of things on the home page of your application
+[x] - Display a list of things on the home page of your application
 
 [] - Add paging to your list page.
 
